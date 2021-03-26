@@ -1,0 +1,4 @@
+uv = abacdef
+u barre = aba
+v barre = fedc
+acbdaef

@@ -1,0 +1,103 @@
+Exercice 1:
+1. Facteurs de abbbaaa:
+F = {e, a, b, aa, ab, ba, bb, aaa, abb, baa, bba, bbb, abbb, baaa, bbaa, bbba, abbba, bbaaa, bbbaa, abbbaa, bbbaaa, abbbaaa}
+|F| = 22
+
+2. Préfixes de abbaa:
+P = {e, a, ab, abb, abba, abbaa}
+|P| = 6
+
+3. Suffixes de abcd:
+S = {abcd, bcd, cd, d, e}
+|S| = 5
+
+4. n+1
+5. entre n+1 et |Sigma|^n + 1
+6. n+1
+7. n+m+1 + n*m = n*(m+1) + m + 1
+
+Exercice 2:
+1. Occurrences de a et b:
+|a^3cbbca|a = 4 et |a^3cbbca|b = 2
+|aabgjdd|a = 2 et |aabgjdd|b = 1
+|titi|a = 0 et |titi|b = 0
+|babc|a = 1 et |babc|b = 2
+
+2. couples (u,v) tels que uv = abaac
+E = {(e, abaac), (abaac, e), (a, baac), (abaa, c), (ab, aac), (aba, ac)}
+|E| = 6
+
+3. Calculer L.M
+(a) L = {a, ab, bb} et M = {e, b, a^2}
+LM = {a, ab, aaa, ab, abb, abaa, bb, bbb, bbaa}
+
+(b) L = 0 et M = {a, ba, bb}
+LM = 0
+
+(c) L = {e} et M = {a, ba, bb}
+LM = M
+
+(d) L = {aa, ab, ba} et M = {a, b}*
+LM = {aaa*b*, aba*b*, baa*b*}
+
+Exercice 3:
+L = {ab, ba}
+abba e L*
+ababa e/ L*
+aab e/ L*
+e e L*
+baab e L*
+bbaabb e/ L*
+
+Exercice 4:
+1. A e P
+2. les langages suivants sont-ils dans P
+(a) L1 e P
+(b) L2 e/ P
+(c) L3 e/ P
+(d) L4 e P
+
+Exercice 5:
+(L, L') e P^2
+L'' = LuL'
+Vm e L'', m e L v m e L' => m est un palindrome
+P stable par union
+
+(L, L') e P^2
+L'' = LnL'
+Vm e L'', m e L n m e L' => m est un palindrome
+P stable par intersection
+
+(L, L') e P^2
+L = {a} et L' = {b}
+L'' = L.L' = {ab} et ab n'est pas un palindrome
+P non stable par concaténation
+
+L e P
+cabac et caabaac e L4
+cabac.caabaac n'est pas un palindrome
+P non stable pour le carré
+
+Exercice 6:
+Réflexivité:
+u est conjugué avec lui-même
+prenons w1 = u et w2 = e
+u = u.e et u = e.u
+
+Symétrie:
+u conjugué à v => u = w1w2 = w11w12...w1nw21...w2m et v = w2w1 = w21...w2m...w1n
+comme v s'obtient par permutation cyclique de u, on peut refaire la permutation dans
+l'autre sens pour retrouver u, donc v conjugé à u.
+
+Transivité:
+u conjugué à v et v conjugué à t
+=> u = w1w2, v = w2w1 et v = w3w4 et t = w4w3
+si |w3| > |w2| alors
+  on prend w3 = w2.w' et w4 = w'' avec w'.w'' = w1
+  t = w4.w3 = w''.w2.w'
+  Par symétrie t conjugue v = w2.w'.w'' = w2.w1 = x
+  Par symétrie x conjugue t
+si |w3| < |w2| alors
+  idem avec w3 = w' et w4 = w''.w1 = w'.w'' = w2
+
+Exercice 7:
